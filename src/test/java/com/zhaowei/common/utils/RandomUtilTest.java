@@ -50,7 +50,8 @@ public class RandomUtilTest {
 	 */
 	@Test
 	public void testRandomCharacter() {
-		fail("Not yet implemented");
+		char randomCharacter = RandomUtil.randomCharacter();
+		System.out.println(randomCharacter);
 	}
 
 	/**
@@ -58,7 +59,9 @@ public class RandomUtilTest {
 	 */
 	@Test
 	public void testRandomString() {
-		fail("Not yet implemented");
+		String randomString = RandomUtil.randomString(5);
+		System.out.println(randomString);
+
 	}
 
 }
