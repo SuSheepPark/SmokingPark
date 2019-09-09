@@ -28,12 +28,17 @@ public class WeekTestTest {
 	 */
 	@Test
 	public void testCheckCellphone() {
-		boolean checkCellphone = WeekTest.checkCellphone("13912345678");
-		System.out.println(checkCellphone);
+		
+		boolean checkCellphone = WeekTest.checkCellphone("1391238");
+		if(checkCellphone) {
+			System.out.println("验证成功");
+		}else {
+			System.out.println("验证失败");
+		}
 	}
 	@Test
 	public void testcheckCellemail() {
-		boolean checkCellemail = WeekTest.checkCellemail("1540476506@qq.com");
+		boolean checkCellemail = WeekTest.checkCellemail("1540476506@qcom");
 		if(checkCellemail) {
 			System.out.println("验证成功");
 		}else {

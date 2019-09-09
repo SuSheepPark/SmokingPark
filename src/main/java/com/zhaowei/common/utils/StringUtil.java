@@ -21,6 +21,26 @@ import java.util.Random;
  * @date: 2019年9月7日 下午3:45:19  
  */
 public class StringUtil {
+	
+	/*
+	* 方法功能：将字符串转换成html文本，如果遇到“\n”换行换符，则要将这一段文本使用<p></p>标签
+	* 包起来。如果遇到“\n\r”两个在一起按上面\n处理。如果只遇到一个“\r”则替换成<br/>标签。
+	* 使用场景：网页文本框传到后台的字符串就可能就会回车换行。
+	例如上图中的文本将转成下面html文本保存到数据库*/
+	
+		public static String toHtml(String text){
+			//TODO 实现代码
+			String str = text.replaceAll(System.getProperty("line.separator"), "|")	;
+			String[] split = str.split("\\|");
+			String newStr="";
+			for (String string2 : split) {
+				newStr+="<p>"+string2+"</p>";
+			}
+			return newStr;
+		}
+		
+		
+	
 	// 方法1：判断源字符串是否有值，空引号(空白字符串)也算没值 (5分)
 		public static boolean hasLength(String src) {
 			return null!=src && src.length()>0;

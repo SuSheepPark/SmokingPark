@@ -44,7 +44,7 @@ public class WeekTest {
 	
 	//手机号验证
 	public static boolean checkCellphone(String str) {
-		String refgExp = "^[1](39|137|178)[0-9]{8}$";
+		String refgExp = "^[1](39|37|18)[0-9]{8}$";
 		Pattern p = Pattern.compile(refgExp);
 		Matcher m = p.matcher(str);
 		return m.matches();
